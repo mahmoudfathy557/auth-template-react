@@ -4,7 +4,7 @@ import * as SurveyReact from 'survey-react-ui'
 import 'survey-core/defaultV2.css'
 import { IntranetContext } from '../context'
 import dmglogo from '../components/img/dmg FOUNDATION.png'
-import { json } from '../survey_json.js'
+
 import Navbar from '../components/Navbar'
 import { Figure } from 'react-bootstrap'
 
