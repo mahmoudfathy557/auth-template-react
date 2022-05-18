@@ -1,0 +1,46 @@
+{
+  "homepage": "https://dmgian.corp-dmg.com/survey-platform-v2",
+  "name": "surveyjs_react_quickstart",
+  "version": "0.2.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.27.2",
+    "bcrypt": "^5.0.1",
+    "bootstrap": "^5.1.3",
+    "jquery": "^3.3.1",
+    "js-cookie": "^3.0.1",
+    "jspdf": "^2.5.1",
+    "jspdf-autotable": "^3.5.23",
+    "react": "^17.0.2",
+    "react-bootstrap": "^2.2.2",
+    "react-copy-to-clipboard": "^5.1.0",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
+    "react-router-dom": "^5.3.1",
+    "react-scripts": "^5.0.0",
+    "survey-analytics": "latest",
+    "survey-core": "latest",
+    "survey-creator-core": "latest",
+    "survey-creator-react": "latest",
+    "survey-pdf": "latest",
+    "survey-react-ui": "latest",
+    "surveyjs-widgets": "latest",
+    "uuid": "^8.3.2",
+    "xlsx": "^0.18.5"
+  },
+  "scripts": {
+    "start": "react-scripts --max_old_space_size=4096 start",
+    "build": "react-scripts --max_old_space_size=4096 build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "jest-canvas-mock": "^2.3.1"
+  }
+}

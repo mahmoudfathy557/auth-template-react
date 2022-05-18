@@ -1,0 +1,84 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh !important;
+}
+
+.app-content {
+  /* overflow-y: auto; */
+  min-height: 100vh !important;
+}
+
+.alert {
+  background-color: rgb(10, 240, 10) !important;
+}
+
+.error-container {
+  height: 88vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  margin: 0 !important;
+}
+
+.navbar-collapse {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logout {
+  cursor: pointer;
+  margin-left: -2rem;
+}
+
+.surveys-table,
+.not-found-container {
+  min-height: calc(100vh - 72px) !important;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.surveys-table td {
+  font-weight: bold;
+  /* padding: 10px 30px !important; */
+}
+
+.table-container {
+  background-color: white;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+table td {
+  vertical-align: middle !important;
+}
+
+.single-survey-page-completed {
+  min-height: calc(100vh - 56px);
+}
+
+.single-survey-page-completed-title {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+.sa-commercial {
+  display: none !important;
+}
+
+.svc-creator__banner {
+  display: none !important;
+}
