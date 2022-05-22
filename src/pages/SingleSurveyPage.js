@@ -3,7 +3,7 @@ import * as Survey from 'survey-core'
 import * as SurveyReact from 'survey-react-ui'
 import 'survey-core/defaultV2.css'
 import { IntranetContext } from '../context'
-import dmglogo from '../components/img/dmg FOUNDATION.png'
+import mvlogo from '../components/img/MVLogo-Yellow.svg'
 
 import Navbar from '../components/Navbar'
 import { Figure } from 'react-bootstrap'
@@ -39,13 +39,8 @@ export default function SingleSurveyPage(props) {
       <div className='container'>
         {!user_id && (
           <Figure className='d-flex flex-column justify-content-center align-items-center mt-3 '>
-            <Figure.Image
-              width={230}
-              height={180}
-              alt='230x180'
-              src={dmglogo}
-            />
-            <Figure.Caption>DMG Survey Platform</Figure.Caption>
+            <Figure.Image width={150} height={100} alt='230x180' src={mvlogo} />
+            <Figure.Caption>MV Survey Platform</Figure.Caption>
           </Figure>
         )}
 
