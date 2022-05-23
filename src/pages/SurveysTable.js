@@ -11,7 +11,6 @@ import {
   Alert,
 } from 'react-bootstrap'
 import DeleteModal from '../components/DeleteModal'
-import { CopyToClipboard } from 'react-copy-to-clipboard'
 
 import {
   AiOutlineVerticalAlignTop,
