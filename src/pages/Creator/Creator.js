@@ -3,7 +3,7 @@ import SurveyCreator from './SurveyCreator'
 
 import { json } from '../../survey_json'
 
-export function CreatorPage() {
+export default function CreatorPage() {
   return (
     <>
       <h2>Survey Creator - create a new survey</h2>

@@ -2,7 +2,7 @@ import React, { useEffect, useContext, useState } from 'react'
 import SurveyCreator from './SurveyCreator'
 import { IntranetContext } from '../../context'
 
-export function EditorPage({ props }) {
+export default function EditorPage(props) {
   const surveyId = props.match.params.id
   const { fetchOneSurvey } = useContext(IntranetContext)
   const [jsonFile, setJsonFile] = useState(null)

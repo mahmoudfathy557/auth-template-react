@@ -1,57 +1,62 @@
-import { CreatorPage } from '../pages/Creator/Creator'
-import { ExportToPDFPage } from '../pages/Export'
-import { AnalyticsPage } from '..//pages/Analytics/Analytics'
-import { AnalyticsTabulatorPage } from '../pages/AnalyticsTabulator/AnalyticsTabulator'
-import { AnalyticsDatatablesPage } from '../pages/AnalyticsDataTables/AnalyticsDatatables'
-import SingleSurveyPage from '../pages/SingleSurveyPage'
-import PreviewSurveyPage from '../pages/PreviewSurveyPage'
-import SurveysTable from '../pages/SurveysTable'
-import { EditorPage } from '../pages/Creator/Editor'
+// import CreatorPage from '../pages/Creator/Creator'
+// import ExportToPDFPage from '../pages/Export'
+// import AnalyticsPage from '../pages/Analytics/Analytics'
+// import AnalyticsTabulatorPage from '../pages/AnalyticsTabulator/AnalyticsTabulator'
+// import AnalyticsDatatablesPage from '../pages/AnalyticsDataTables/AnalyticsDatatables'
+// import SingleSurveyPage from '../pages/SingleSurveyPage'
+// import PreviewSurveyPage from '../pages/PreviewSurveyPage'
+// import SurveysTable from '../pages/SurveysTable'
+// import EditorPage from '../pages/Creator/Editor'
+import { lazy } from 'react'
 
 const routes = [
   {
     path: '/',
-    component: (props) => <SurveysTable props={props} />,
+    component: lazy((props) => import('../pages/SurveysTable')),
     exact: true,
   },
   {
     path: 'creator',
-    component: () => <CreatorPage />,
+    component: lazy(() => import('../pages/Creator/Creator')),
     exact: true,
   },
   {
     path: 'export/:id',
-    component: (props) => <ExportToPDFPage props={props} />,
+    component: lazy((props) => import('../pages/Export')),
     exact: true,
   },
   // {
   //   path: 'survey/:id',
-  //   component: (props) => <SingleSurveyPage props={props} />,
+  //   component:lazy( (props) => <SingleSurveyPage props={props} />),
   //   exact: true,
   // },
   {
     path: 'preview/:id',
-    component: (props) => <PreviewSurveyPage props={props} />,
+    component: lazy((props) => import('../pages/PreviewSurveyPage')),
     exact: true,
   },
   {
     path: 'edit/:id',
-    component: (props) => <EditorPage props={props} />,
+    component: lazy((props) => import('../pages/Creator/Editor')),
     exact: true,
   },
   {
     path: 'analytics/:id',
-    component: (props) => <AnalyticsPage props={props} />,
+    component: lazy((props) => import('../pages/Analytics/Analytics')),
     exact: true,
   },
   {
     path: 'analyticsdatatables/:id',
-    component: (props) => <AnalyticsDatatablesPage props={props} />,
+    component: lazy((props) =>
+      import('../pages/AnalyticsDataTables/AnalyticsDatatables')
+    ),
     exact: true,
   },
   {
     path: 'analyticstabulator',
-    component: () => <AnalyticsTabulatorPage />,
+    component: lazy(() =>
+      import('../pages/AnalyticsTabulator/AnalyticsTabulator')
+    ),
     exact: true,
   },
 ]

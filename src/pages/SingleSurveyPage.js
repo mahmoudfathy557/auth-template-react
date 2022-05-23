@@ -24,7 +24,7 @@ export default function SingleSurveyPage(props) {
     addNewSurveyResult(JSON.stringify(result.valuesHash), surveyId)
   }
 
-  useEffect(async () => {
+  useEffect(() => {
     fetchOneSurvey(surveyId)
       .then((res) => {
         const surveyJson = JSON.parse(res.data[0].survey_json)

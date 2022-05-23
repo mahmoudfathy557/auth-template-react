@@ -6,7 +6,7 @@ import * as SurveyPDF from 'survey-pdf'
 
 // import { json } from '../survey_json.js'
 
-export function ExportToPDFPage({ props }) {
+export default function ExportToPDFPage(props) {
   const surveyId = props.match.params.id
   const { fetchOneSurvey } = useContext(IntranetContext)
   const [model, setModel] = useState(null)

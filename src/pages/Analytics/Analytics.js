@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from 'react'
 import SurveyAnalytics from './SurveyAnalytics'
 import { IntranetContext } from '../../context'
 
-export function AnalyticsPage({ props }) {
+export default function AnalyticsPage(props) {
   const surveyId = props.match.params.id
   const { fetchOneSurvey, fetchSurveyResult } = useContext(IntranetContext)
   const [surveyJSON, setSurveyJSON] = useState(null)

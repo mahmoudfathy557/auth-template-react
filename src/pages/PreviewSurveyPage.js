@@ -9,7 +9,7 @@ import { Badge, Button } from 'react-bootstrap'
 
 Survey.StylesManager.applyTheme('defaultV2')
 
-export default function SingleSurveyPage({ props }) {
+export default function SingleSurveyPage(props) {
   const surveyId = props.match.params.id
   const { fetchOneSurvey } = useContext(IntranetContext)
   const [model, setModel] = useState(null)
