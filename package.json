@@ -16,7 +16,7 @@
     "react-dom": "*",
     "react-icons": "*",
     "react-router-dom": "^5.3.1",
-    "react-scripts": "^*",
+    "react-scripts": "*",
     "survey-analytics": "latest",
     "survey-core": "latest",
     "survey-creator-core": "latest",
@@ -28,8 +28,8 @@
     "xlsx": "*"
   },
   "scripts": {
-    "start": "react-scripts --max_old_space_size=8128 start",
-    "build": "react-scripts --max_old_space_size=8128  build",
+    "start": "react-scripts  start",
+    "build": "react-scripts   build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
