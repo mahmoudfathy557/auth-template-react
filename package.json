@@ -28,8 +28,8 @@
     "xlsx": "*"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts  build",
+    "start": "react-scripts --max_old_space_size=8128 start",
+    "build": "react-scripts --max_old_space_size=8128  build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
