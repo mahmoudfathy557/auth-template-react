@@ -21,8 +21,8 @@ const IntranetProvider = ({ children }) => {
         }
   )
 
-  const baseAPI = 'http://localhost:8002'
-  // const baseAPI = 'https://dmgian.corp-dmg.com:8002'
+  // const baseAPI = 'http://localhost:8002'
+  const baseAPI = 'https://survey-platform-67zi2.ondigitalocean.app/api'
 
   const login = async (username, password) => {
     setUser({
@@ -326,6 +326,26 @@ const IntranetProvider = ({ children }) => {
       })
     }
   }
+
+  const DIGITALOCEAN_TOKEN =
+    'dop_v1_f887af1de77287258a6bfef9545228383872a99fb8b59962123377e8b33bb781'
+  const fetchData = async () => {
+    const result = await axios.get(
+      'https://api.digitalocean.com/v2/databases',
+      {
+        headers: {
+          Authorization: `Bearer ${DIGITALOCEAN_TOKEN}`,
+        },
+      }
+    )
+    return result.data
+  }
+
+  useEffect(() => {
+    fetchData().then((res) => {
+      console.log(res)
+    })
+  }, [])
 
   return (
     <IntranetContext.Provider
