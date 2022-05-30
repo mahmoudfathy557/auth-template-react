@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react'
 import './login.css'
-import dmgLogo from '../../components/img/dmg-logo.png'
+import MVLogo from '../../components/img/MVLogo-Yellow.svg'
 import { IntranetContext } from '../../context'
 import { Alert } from 'react-bootstrap'
 import SkeletonLoader from '../../components/Skeleton/SkeletonLoader'
@@ -30,7 +30,7 @@ const Login = () => {
         <div className=' login-form '>
           <div className='col-9 col-md-7 col-lg-5 mt-5'>
             <div className='text-center mb-4'>
-              <img className='mb-4' src={dmgLogo} alt='logo' />
+              <img className='mb-4' src={MVLogo} alt='logo' height={250} />
             </div>
             {isLoading && !error ? (
               <SkeletonLoader />

@@ -6,10 +6,9 @@ const IntranetContext = React.createContext()
 
 const IntranetProvider = ({ children }) => {
   const [surveys, setSurveys] = useState([])
+  const [isAdmin, setIsAdmin] = useState(false)
   const [serverError, setServerError] = useState({ show: false, msg: '' })
-
   const [isDataLoading, setIsDataLoading] = useState(false)
-
   const [user, setUser] = useState(
     localStorage.getItem('loginStatus')
       ? JSON.parse(localStorage.getItem('loginStatus'))
@@ -21,8 +20,8 @@ const IntranetProvider = ({ children }) => {
         }
   )
 
-  // const baseAPI = 'http://localhost:4000'
-  const baseAPI = 'https://survey.mountainviewegypt.com/api'
+  const baseAPI = 'http://localhost:4000'
+  // const baseAPI = 'https://survey.mountainviewegypt.com/api'
   // const baseAPI = 'https://survey-platform-67zi2.ondigitalocean.app/api'
 
   const login = async (username, password) => {
@@ -101,7 +100,7 @@ const IntranetProvider = ({ children }) => {
 
   const addNewSurvey = (surveyData) => {
     const data = {
-      user_id: user.userData.userId,
+      user_id: user?.userData?.userId,
       survey_json: surveyData,
     }
     axios({
@@ -131,7 +130,7 @@ const IntranetProvider = ({ children }) => {
       const result = await axios({
         method: 'post',
         url: `${baseAPI}/fetchAllSurveys`,
-        data: { creator_id: user.userData.userId },
+        data: { creator_id: user?.userData?.userId },
         headers: {
           'Content-Type': 'application/json',
           'Access-Control-Allow-Origin': '*',
@@ -141,6 +140,8 @@ const IntranetProvider = ({ children }) => {
           Accept: '*/*',
         },
       })
+
+      setIsAdmin(result.data.isAdmin)
       setSurveys(result.data.data)
     } catch (error) {
       console.log(error)
@@ -198,7 +199,7 @@ const IntranetProvider = ({ children }) => {
 
   const editOneSurvey = async (surveyData, surveyId) => {
     const data = {
-      editor_id: user.userData.userId,
+      editor_id: user?.userData?.userId,
       survey_json: surveyData,
     }
     try {
@@ -254,7 +255,7 @@ const IntranetProvider = ({ children }) => {
 
   const checkIfUserAnsweredSpecificSurvey = async (surveyId) => {
     const data = {
-      user_id: Number(user.userData.userId),
+      user_id: Number(user?.userData?.userId),
     }
 
     try {
@@ -303,7 +304,7 @@ const IntranetProvider = ({ children }) => {
 
   const publishSurvey = async (surveyId) => {
     const data = {
-      creator_id: Number(user.userData.userId),
+      creator_id: Number(user?.userData?.userId),
     }
     try {
       const result = await axios({
@@ -336,6 +337,7 @@ const IntranetProvider = ({ children }) => {
         surveys,
         serverError,
         user_id,
+        isAdmin,
         login,
         logout,
         addNewSurvey,

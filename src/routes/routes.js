@@ -12,7 +12,7 @@ import { lazy } from 'react'
 const routes = [
   {
     path: '/',
-    component: lazy((props) => import('../pages/SurveysTable')),
+    component: lazy((props) => import('../pages/SurveysTable/SurveysTable')),
     exact: true,
   },
   {

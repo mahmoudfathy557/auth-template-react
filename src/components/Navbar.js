@@ -7,7 +7,7 @@ import { Navbar, Container, Nav } from 'react-bootstrap'
 
 const MyNavbar = () => {
   const { user, logout } = useContext(IntranetContext)
-  const { userName } = user.userData
+  const { userName } = user?.userData
 
   return (
     <Navbar bg='light' expand='md'>
