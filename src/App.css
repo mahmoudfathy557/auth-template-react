@@ -83,3 +83,11 @@ table td {
 .svc-creator__banner {
   display: none !important;
 }
+
+.app-content > div h2 {
+  padding: 24px;
+}
+
+.app-content > div span {
+  padding: 0 24px;
+}
