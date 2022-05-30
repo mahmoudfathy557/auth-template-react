@@ -88,6 +88,6 @@ table td {
   padding: 24px;
 }
 
-.app-content span {
+.app-content > div span {
   padding: 0 24px;
 }
