@@ -28,7 +28,7 @@ export default function App() {
 
   const isAuthenticated = user.isAuthenticated
   return (
-    <Router>
+    <HashRouter basename='/'>
       <Suspense fallback={<SkeletonLoader />}>
         <Switch>
           <PublicRoute path='/login' isAuthenticated={isAuthenticated}>
@@ -53,6 +53,6 @@ export default function App() {
           )}
         </Switch>
       </Suspense>
-    </Router>
+    </HashRouter>
   )
 }
