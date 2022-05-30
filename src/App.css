@@ -84,10 +84,10 @@ table td {
   display: none !important;
 }
 
-.app-content > div h2 {
+.app-content h2 {
   padding: 24px;
 }
 
-.app-content > div span {
+.app-content span {
   padding: 0 24px;
 }
