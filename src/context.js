@@ -20,8 +20,8 @@ const IntranetProvider = ({ children }) => {
         }
   )
 
-  const baseAPI = 'http://localhost:4000'
-  // const baseAPI = 'https://survey.mountainviewegypt.com/api'
+  // const baseAPI = 'http://localhost:4000'
+  const baseAPI = 'https://survey.mountainviewegypt.com/api'
   // const baseAPI = 'https://survey-platform-67zi2.ondigitalocean.app/api'
 
   const login = async (username, password) => {
