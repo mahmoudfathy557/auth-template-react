@@ -7,14 +7,15 @@ import { Navbar, Container, Nav } from 'react-bootstrap'
 
 const MyNavbar = () => {
   const { user, logout } = useContext(IntranetContext)
-  const { userName } = user?.userData
+
+  const userName = user?.userData?.name
 
   return (
     <Navbar bg='light' expand='md'>
       <Container fluid className='d-flex flex-column flex-md-row mx-3'>
         <Navbar.Brand>
           <Link className='nav-link' to='/'>
-            Surveys
+            Elshorbagy
           </Link>
         </Navbar.Brand>
         <h5 className='text-center d-md-none'>Welcome, {userName}</h5>
@@ -24,16 +25,7 @@ const MyNavbar = () => {
           id='basic-navbar-nav'
           className='flex-column   flex-md-row'
         >
-          <ul className='navbar-nav d-flex flex-column flex-md-row my-3 m-md-0'>
-            <li>
-              <Link
-                className='btn btn-success text-white nav-link'
-                to='/creator'
-              >
-                Create Survey [+]
-              </Link>
-            </li>
-          </ul>
+          <ul className='navbar-nav d-flex flex-column flex-md-row my-3 m-md-0'></ul>
           <div className='   d-flex d-flex flex-column flex-md-row align-item-start align-item-md-end  my-3 m-md-0'>
             <h5 className='text-center d-none d-md-flex align-self-md-center'>
               Welcome, {userName}

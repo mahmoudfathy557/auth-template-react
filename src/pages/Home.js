@@ -1,6 +1,9 @@
-import React from 'react'
+import axios from 'axios'
+import React, { useEffect } from 'react'
 
 const Home = () => {
+  useEffect(() => {}, [])
+
   return <div>Home</div>
 }
 

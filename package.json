@@ -10,6 +10,7 @@
     "js-cookie": "*",
     "jspdf": "*",
     "jspdf-autotable": "*",
+    "jwt-decode": "^3.1.2",
     "react": "*",
     "react-bootstrap": "*",
     "react-copy-to-clipboard": "*",

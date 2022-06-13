@@ -11,8 +11,6 @@ import './App.css'
 
 import * as Survey from 'survey-core'
 
-export { MyQuestion } from './MyQuestion'
-
 import PublicRoute from './routes/PublicRoute'
 import PrivateRoute from './routes/PrivateRoute'
 import ProtectedRoutes from './routes/ProtectedRoutes'
@@ -21,7 +19,6 @@ import Login from './pages/Login/Login'
 
 import { IntranetContext } from './context'
 import MyNavbar from './components/Navbar'
-import SingleSurveyPage from './pages/SingleSurveyPage'
 
 export default function App() {
   const { user, serverError } = useContext(IntranetContext)
@@ -34,7 +31,6 @@ export default function App() {
           <PublicRoute path='/login' isAuthenticated={isAuthenticated}>
             <Login />
           </PublicRoute>
-          <Route path='/survey/:id' component={SingleSurveyPage} />
 
           {serverError.show ? (
             <>
